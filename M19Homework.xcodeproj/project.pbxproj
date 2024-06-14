@@ -1,0 +1,786 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A0F8FC5AD08F96EBA7F706A3 /* Pods_M19Homework_M19HomeworkUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8FB21035EB34B8CD467B196 /* Pods_M19Homework_M19HomeworkUITests.framework */; };
+		CAB64E0D2327E5996AEECEF5 /* Pods_M19HomeworkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72D1E8843EB85FF70C7D7844 /* Pods_M19HomeworkTests.framework */; };
+		E07FFDF416FA4E460C49E6AF /* Pods_M19Homework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9B85A2EA365A1711106200D /* Pods_M19Homework.framework */; };
+		FD042E9D2C19E6470089CB0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD042E9C2C19E6470089CB0B /* AppDelegate.swift */; };
+		FD042E9F2C19E6470089CB0B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD042E9E2C19E6470089CB0B /* SceneDelegate.swift */; };
+		FD042EA12C19E6470089CB0B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD042EA02C19E6470089CB0B /* ViewController.swift */; };
+		FD042EA42C19E6470089CB0B /* Base in Resources */ = {isa = PBXBuildFile; fileRef = FD042EA32C19E6470089CB0B /* Base */; };
+		FD042EA62C19E6490089CB0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD042EA52C19E6490089CB0B /* Assets.xcassets */; };
+		FD042EA92C19E6490089CB0B /* Base in Resources */ = {isa = PBXBuildFile; fileRef = FD042EA82C19E6490089CB0B /* Base */; };
+		FD042EB42C19E64A0089CB0B /* M19HomeworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD042EB32C19E64A0089CB0B /* M19HomeworkTests.swift */; };
+		FD042EBE2C19E64A0089CB0B /* M19HomeworkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD042EBD2C19E64A0089CB0B /* M19HomeworkUITests.swift */; };
+		FD042EC02C19E64A0089CB0B /* M19HomeworkUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD042EBF2C19E64A0089CB0B /* M19HomeworkUITestsLaunchTests.swift */; };
+		FD042ECD2C1A081A0089CB0B /* ViewElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD042ECC2C1A081A0089CB0B /* ViewElements.swift */; };
+		FD042ECF2C1A307B0089CB0B /* CellLabelAndImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD042ECE2C1A307B0089CB0B /* CellLabelAndImageModel.swift */; };
+		FD042ED12C1A53C60089CB0B /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD042ED02C1A53C60089CB0B /* DescriptionViewController.swift */; };
+		FD042ED32C1AFA780089CB0B /* NetWorkWithAlamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD042ED22C1AFA780089CB0B /* NetWorkWithAlamofire.swift */; };
+		FD042ED52C1AFABB0089CB0B /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD042ED42C1AFABB0089CB0B /* DataModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FD042EB02C19E64A0089CB0B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD042E912C19E6470089CB0B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD042E982C19E6470089CB0B;
+			remoteInfo = M19Homework;
+		};
+		FD042EBA2C19E64A0089CB0B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD042E912C19E6470089CB0B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD042E982C19E6470089CB0B;
+			remoteInfo = M19Homework;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		177AABBB97A16405F436FB15 /* Pods-M19HomeworkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-M19HomeworkTests.debug.xcconfig"; path = "Target Support Files/Pods-M19HomeworkTests/Pods-M19HomeworkTests.debug.xcconfig"; sourceTree = "<group>"; };
+		36EE270152E2A1683FDD3F5D /* Pods-M19HomeworkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-M19HomeworkTests.release.xcconfig"; path = "Target Support Files/Pods-M19HomeworkTests/Pods-M19HomeworkTests.release.xcconfig"; sourceTree = "<group>"; };
+		72D1E8843EB85FF70C7D7844 /* Pods_M19HomeworkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_M19HomeworkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADE93CE2DFF9B8C74B1E9B04 /* Pods-M19Homework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-M19Homework.release.xcconfig"; path = "Target Support Files/Pods-M19Homework/Pods-M19Homework.release.xcconfig"; sourceTree = "<group>"; };
+		C9B85A2EA365A1711106200D /* Pods_M19Homework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_M19Homework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8FB21035EB34B8CD467B196 /* Pods_M19Homework_M19HomeworkUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_M19Homework_M19HomeworkUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDBA2D431465AA7671339AD5 /* Pods-M19Homework-M19HomeworkUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-M19Homework-M19HomeworkUITests.debug.xcconfig"; path = "Target Support Files/Pods-M19Homework-M19HomeworkUITests/Pods-M19Homework-M19HomeworkUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F90BB7DF504E478DF337F96C /* Pods-M19Homework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-M19Homework.debug.xcconfig"; path = "Target Support Files/Pods-M19Homework/Pods-M19Homework.debug.xcconfig"; sourceTree = "<group>"; };
+		FD042E992C19E6470089CB0B /* M19Homework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = M19Homework.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD042E9C2C19E6470089CB0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FD042E9E2C19E6470089CB0B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FD042EA02C19E6470089CB0B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FD042EA32C19E6470089CB0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FD042EA52C19E6490089CB0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FD042EA82C19E6490089CB0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FD042EAA2C19E6490089CB0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD042EAF2C19E64A0089CB0B /* M19HomeworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = M19HomeworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD042EB32C19E64A0089CB0B /* M19HomeworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M19HomeworkTests.swift; sourceTree = "<group>"; };
+		FD042EB92C19E64A0089CB0B /* M19HomeworkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = M19HomeworkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD042EBD2C19E64A0089CB0B /* M19HomeworkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M19HomeworkUITests.swift; sourceTree = "<group>"; };
+		FD042EBF2C19E64A0089CB0B /* M19HomeworkUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M19HomeworkUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FD042ECC2C1A081A0089CB0B /* ViewElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewElements.swift; sourceTree = "<group>"; };
+		FD042ECE2C1A307B0089CB0B /* CellLabelAndImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellLabelAndImageModel.swift; sourceTree = "<group>"; };
+		FD042ED02C1A53C60089CB0B /* DescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
+		FD042ED22C1AFA780089CB0B /* NetWorkWithAlamofire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorkWithAlamofire.swift; sourceTree = "<group>"; };
+		FD042ED42C1AFABB0089CB0B /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		FE6DCBBB619A0190E051F70D /* Pods-M19Homework-M19HomeworkUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-M19Homework-M19HomeworkUITests.release.xcconfig"; path = "Target Support Files/Pods-M19Homework-M19HomeworkUITests/Pods-M19Homework-M19HomeworkUITests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FD042E962C19E6470089CB0B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E07FFDF416FA4E460C49E6AF /* Pods_M19Homework.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD042EAC2C19E64A0089CB0B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAB64E0D2327E5996AEECEF5 /* Pods_M19HomeworkTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD042EB62C19E64A0089CB0B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0F8FC5AD08F96EBA7F706A3 /* Pods_M19Homework_M19HomeworkUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		297F8DAB8EFE50D23964B903 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C9B85A2EA365A1711106200D /* Pods_M19Homework.framework */,
+				D8FB21035EB34B8CD467B196 /* Pods_M19Homework_M19HomeworkUITests.framework */,
+				72D1E8843EB85FF70C7D7844 /* Pods_M19HomeworkTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3D11569A84CD0D973A0B5110 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F90BB7DF504E478DF337F96C /* Pods-M19Homework.debug.xcconfig */,
+				ADE93CE2DFF9B8C74B1E9B04 /* Pods-M19Homework.release.xcconfig */,
+				EDBA2D431465AA7671339AD5 /* Pods-M19Homework-M19HomeworkUITests.debug.xcconfig */,
+				FE6DCBBB619A0190E051F70D /* Pods-M19Homework-M19HomeworkUITests.release.xcconfig */,
+				177AABBB97A16405F436FB15 /* Pods-M19HomeworkTests.debug.xcconfig */,
+				36EE270152E2A1683FDD3F5D /* Pods-M19HomeworkTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FD042E902C19E6470089CB0B = {
+			isa = PBXGroup;
+			children = (
+				FD042E9B2C19E6470089CB0B /* M19Homework */,
+				FD042EB22C19E64A0089CB0B /* M19HomeworkTests */,
+				FD042EBC2C19E64A0089CB0B /* M19HomeworkUITests */,
+				FD042E9A2C19E6470089CB0B /* Products */,
+				3D11569A84CD0D973A0B5110 /* Pods */,
+				297F8DAB8EFE50D23964B903 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FD042E9A2C19E6470089CB0B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FD042E992C19E6470089CB0B /* M19Homework.app */,
+				FD042EAF2C19E64A0089CB0B /* M19HomeworkTests.xctest */,
+				FD042EB92C19E64A0089CB0B /* M19HomeworkUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FD042E9B2C19E6470089CB0B /* M19Homework */ = {
+			isa = PBXGroup;
+			children = (
+				FD042E9C2C19E6470089CB0B /* AppDelegate.swift */,
+				FD042E9E2C19E6470089CB0B /* SceneDelegate.swift */,
+				FD042EA02C19E6470089CB0B /* ViewController.swift */,
+				FD042ED22C1AFA780089CB0B /* NetWorkWithAlamofire.swift */,
+				FD042ED42C1AFABB0089CB0B /* DataModel.swift */,
+				FD042ECC2C1A081A0089CB0B /* ViewElements.swift */,
+				FD042ECE2C1A307B0089CB0B /* CellLabelAndImageModel.swift */,
+				FD042ED02C1A53C60089CB0B /* DescriptionViewController.swift */,
+				FD042EA22C19E6470089CB0B /* Main.storyboard */,
+				FD042EA52C19E6490089CB0B /* Assets.xcassets */,
+				FD042EA72C19E6490089CB0B /* LaunchScreen.storyboard */,
+				FD042EAA2C19E6490089CB0B /* Info.plist */,
+			);
+			path = M19Homework;
+			sourceTree = "<group>";
+		};
+		FD042EB22C19E64A0089CB0B /* M19HomeworkTests */ = {
+			isa = PBXGroup;
+			children = (
+				FD042EB32C19E64A0089CB0B /* M19HomeworkTests.swift */,
+			);
+			path = M19HomeworkTests;
+			sourceTree = "<group>";
+		};
+		FD042EBC2C19E64A0089CB0B /* M19HomeworkUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FD042EBD2C19E64A0089CB0B /* M19HomeworkUITests.swift */,
+				FD042EBF2C19E64A0089CB0B /* M19HomeworkUITestsLaunchTests.swift */,
+			);
+			path = M19HomeworkUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FD042E982C19E6470089CB0B /* M19Homework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD042EC32C19E64A0089CB0B /* Build configuration list for PBXNativeTarget "M19Homework" */;
+			buildPhases = (
+				070EE732469980E0A81144C7 /* [CP] Check Pods Manifest.lock */,
+				FD042E952C19E6470089CB0B /* Sources */,
+				FD042E962C19E6470089CB0B /* Frameworks */,
+				FD042E972C19E6470089CB0B /* Resources */,
+				797B20A864165FD305731A53 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = M19Homework;
+			productName = M19Homework;
+			productReference = FD042E992C19E6470089CB0B /* M19Homework.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FD042EAE2C19E64A0089CB0B /* M19HomeworkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD042EC62C19E64A0089CB0B /* Build configuration list for PBXNativeTarget "M19HomeworkTests" */;
+			buildPhases = (
+				1D7BFACFC5764184BDDA3122 /* [CP] Check Pods Manifest.lock */,
+				FD042EAB2C19E64A0089CB0B /* Sources */,
+				FD042EAC2C19E64A0089CB0B /* Frameworks */,
+				FD042EAD2C19E64A0089CB0B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FD042EB12C19E64A0089CB0B /* PBXTargetDependency */,
+			);
+			name = M19HomeworkTests;
+			productName = M19HomeworkTests;
+			productReference = FD042EAF2C19E64A0089CB0B /* M19HomeworkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FD042EB82C19E64A0089CB0B /* M19HomeworkUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD042EC92C19E64A0089CB0B /* Build configuration list for PBXNativeTarget "M19HomeworkUITests" */;
+			buildPhases = (
+				C625D749E923DE7367D62489 /* [CP] Check Pods Manifest.lock */,
+				FD042EB52C19E64A0089CB0B /* Sources */,
+				FD042EB62C19E64A0089CB0B /* Frameworks */,
+				FD042EB72C19E64A0089CB0B /* Resources */,
+				99DD00372C197479C6A68D3C /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FD042EBB2C19E64A0089CB0B /* PBXTargetDependency */,
+			);
+			name = M19HomeworkUITests;
+			productName = M19HomeworkUITests;
+			productReference = FD042EB92C19E64A0089CB0B /* M19HomeworkUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FD042E912C19E6470089CB0B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					FD042E982C19E6470089CB0B = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					FD042EAE2C19E64A0089CB0B = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = FD042E982C19E6470089CB0B;
+					};
+					FD042EB82C19E64A0089CB0B = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = FD042E982C19E6470089CB0B;
+					};
+				};
+			};
+			buildConfigurationList = FD042E942C19E6470089CB0B /* Build configuration list for PBXProject "M19Homework" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FD042E902C19E6470089CB0B;
+			productRefGroup = FD042E9A2C19E6470089CB0B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FD042E982C19E6470089CB0B /* M19Homework */,
+				FD042EAE2C19E64A0089CB0B /* M19HomeworkTests */,
+				FD042EB82C19E64A0089CB0B /* M19HomeworkUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FD042E972C19E6470089CB0B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD042EA62C19E6490089CB0B /* Assets.xcassets in Resources */,
+				FD042EA92C19E6490089CB0B /* Base in Resources */,
+				FD042EA42C19E6470089CB0B /* Base in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD042EAD2C19E64A0089CB0B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD042EB72C19E64A0089CB0B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		070EE732469980E0A81144C7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-M19Homework-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1D7BFACFC5764184BDDA3122 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-M19HomeworkTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		797B20A864165FD305731A53 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-M19Homework/Pods-M19Homework-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-M19Homework/Pods-M19Homework-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-M19Homework/Pods-M19Homework-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		99DD00372C197479C6A68D3C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-M19Homework-M19HomeworkUITests/Pods-M19Homework-M19HomeworkUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-M19Homework-M19HomeworkUITests/Pods-M19Homework-M19HomeworkUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-M19Homework-M19HomeworkUITests/Pods-M19Homework-M19HomeworkUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C625D749E923DE7367D62489 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-M19Homework-M19HomeworkUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FD042E952C19E6470089CB0B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD042EA12C19E6470089CB0B /* ViewController.swift in Sources */,
+				FD042ECD2C1A081A0089CB0B /* ViewElements.swift in Sources */,
+				FD042E9D2C19E6470089CB0B /* AppDelegate.swift in Sources */,
+				FD042ED12C1A53C60089CB0B /* DescriptionViewController.swift in Sources */,
+				FD042ED32C1AFA780089CB0B /* NetWorkWithAlamofire.swift in Sources */,
+				FD042ED52C1AFABB0089CB0B /* DataModel.swift in Sources */,
+				FD042ECF2C1A307B0089CB0B /* CellLabelAndImageModel.swift in Sources */,
+				FD042E9F2C19E6470089CB0B /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD042EAB2C19E64A0089CB0B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD042EB42C19E64A0089CB0B /* M19HomeworkTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD042EB52C19E64A0089CB0B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD042EC02C19E64A0089CB0B /* M19HomeworkUITestsLaunchTests.swift in Sources */,
+				FD042EBE2C19E64A0089CB0B /* M19HomeworkUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FD042EB12C19E64A0089CB0B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD042E982C19E6470089CB0B /* M19Homework */;
+			targetProxy = FD042EB02C19E64A0089CB0B /* PBXContainerItemProxy */;
+		};
+		FD042EBB2C19E64A0089CB0B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD042E982C19E6470089CB0B /* M19Homework */;
+			targetProxy = FD042EBA2C19E64A0089CB0B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FD042EA22C19E6470089CB0B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FD042EA32C19E6470089CB0B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FD042EA72C19E6490089CB0B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FD042EA82C19E6490089CB0B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FD042EC12C19E64A0089CB0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FD042EC22C19E64A0089CB0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FD042EC42C19E64A0089CB0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F90BB7DF504E478DF337F96C /* Pods-M19Homework.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q7GY7ARMP7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = M19Homework/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Owner.M19Homework;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FD042EC52C19E64A0089CB0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ADE93CE2DFF9B8C74B1E9B04 /* Pods-M19Homework.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q7GY7ARMP7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = M19Homework/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Owner.M19Homework;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FD042EC72C19E64A0089CB0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 177AABBB97A16405F436FB15 /* Pods-M19HomeworkTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q7GY7ARMP7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Owner.M19HomeworkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/M19Homework.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/M19Homework";
+			};
+			name = Debug;
+		};
+		FD042EC82C19E64A0089CB0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36EE270152E2A1683FDD3F5D /* Pods-M19HomeworkTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q7GY7ARMP7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Owner.M19HomeworkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/M19Homework.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/M19Homework";
+			};
+			name = Release;
+		};
+		FD042ECA2C19E64A0089CB0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EDBA2D431465AA7671339AD5 /* Pods-M19Homework-M19HomeworkUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q7GY7ARMP7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Owner.M19HomeworkUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = M19Homework;
+			};
+			name = Debug;
+		};
+		FD042ECB2C19E64A0089CB0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE6DCBBB619A0190E051F70D /* Pods-M19Homework-M19HomeworkUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q7GY7ARMP7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Owner.M19HomeworkUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = M19Homework;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FD042E942C19E6470089CB0B /* Build configuration list for PBXProject "M19Homework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD042EC12C19E64A0089CB0B /* Debug */,
+				FD042EC22C19E64A0089CB0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD042EC32C19E64A0089CB0B /* Build configuration list for PBXNativeTarget "M19Homework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD042EC42C19E64A0089CB0B /* Debug */,
+				FD042EC52C19E64A0089CB0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD042EC62C19E64A0089CB0B /* Build configuration list for PBXNativeTarget "M19HomeworkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD042EC72C19E64A0089CB0B /* Debug */,
+				FD042EC82C19E64A0089CB0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD042EC92C19E64A0089CB0B /* Build configuration list for PBXNativeTarget "M19HomeworkUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD042ECA2C19E64A0089CB0B /* Debug */,
+				FD042ECB2C19E64A0089CB0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FD042E912C19E6470089CB0B /* Project object */;
+}
