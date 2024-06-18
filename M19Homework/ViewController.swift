@@ -7,10 +7,15 @@ enum listButton {
     case tableChoose
 }
 
+class ResultsData{
+    var dataForTable: [CellLabelAndImageModel] = []
+}
+
 class ViewController: UIViewController {
     
-    var chooseButton: listButton = .none
+    var dataForTable = [CellLabelAndImageModel]()
     
+    var chooseButton: listButton = .none
     private lazy var textField = ViewElements().textField
     private lazy var searchButton = ViewElements().searchButton
     private lazy var popularButton = ViewElements().popularButton
@@ -18,8 +23,7 @@ class ViewController: UIViewController {
     var tableView = ViewElements().tableView
     
     let cellLabelAndImage = "cellLabelAndImage"
-    
-    
+        
     let apiKeys = ["X-API-KEY" : "5a1aa54a-2e6d-40b4-aa36-e6950cc441ee"]
     
     override func viewDidLoad() {
@@ -97,7 +101,7 @@ class ViewController: UIViewController {
         let text = "https://kinopoiskapiunofficial.tech/api/v2.2/films/top?type=TOP_100_POPULAR_FILMS"
         self.chooseButton = .searchAndPopularButton
         alamofireProcess(text: text, chooseButton: chooseButton)
-        
+        print(dataForTable)
     }
     
     private func unwrapString(string : String?) -> String{
@@ -112,7 +116,6 @@ class ViewController: UIViewController {
     
     private func alamofireProcess(text: String, chooseButton: listButton){
         let film = text
-        var dataForTable: [CellLabelAndImageModel] = []
         NetWorkWithAlamofire.shared.fetchData(text: film, apiKeys: self.apiKeys, chooseButton: chooseButton ) { result in
             switch result{
                 case .success(let filmResults):
@@ -121,17 +124,27 @@ class ViewController: UIViewController {
                     return
                 case .searchAndPopularButton:
                     let myData = filmResults.0!
-                        DispatchQueue.main.async { [weak self] in
-                            guard let self = self else {return}
-                            let maxCount = myData.films.count
-                            for i in 0...maxCount - 1 {
-                                var name = unwrapString(string: myData.films[i].nameRu)
-//                                var picture = myData.films[i].posterUrlPreview
-//                                var id = myData.films[i].filmId
-                                dataForTable.append(CellLabelAndImageModel(label: name))
-                            }
+                    let maxCount = myData.films.count
+//                    let syncConc = DispatchQueue(label:"con",attributes:.concurrent)
+//                    syncConc.sync() {
+                        for i in 0...maxCount - 1 {
+                            var name = self.unwrapString(string: myData.films[i].nameRu)
+                            self.dataForTable.append(CellLabelAndImageModel(label: name))
                         }
+//                    }
                     
+//                        DispatchQueue.main.async { [weak self]  in
+//                            guard let self = self else {return}
+//                            let maxCount = myData.films.count
+//                            for i in 0...maxCount - 1 {
+//                                var name = unwrapString(string: myData.films[i].nameRu)
+//                                let syncConc = DispatchQueue(label:"con",attributes:.concurrent)
+//                                syncConc.sync() {
+//                                    self.dataForTable.append(CellLabelAndImageModel(label: name))
+//                                }
+//                                
+//                            }
+//                        }
                 case .tableChoose:
                         let myData = filmResults.1!
                             DispatchQueue.main.async { [weak self] in
@@ -143,10 +156,8 @@ class ViewController: UIViewController {
                     return
             }
         }
-        //print(dataForTable)
-    
     }
-
+    
 }
 
 extension ViewController: UITableViewDataSource {
@@ -178,3 +189,4 @@ extension ViewController: UITextFieldDelegate {
         textField.resignFirstResponder()
     }
 }
+
