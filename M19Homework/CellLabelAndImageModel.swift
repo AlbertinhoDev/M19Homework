@@ -2,7 +2,8 @@ import Foundation
 import UIKit
 
 struct CellLabelAndImageModel {
-    let label: String
-//    let image: UIImage
-//    let id: Int
+    let name: String
+    let image: UIImage
+    let id: Int
 }
+

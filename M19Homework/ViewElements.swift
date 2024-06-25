@@ -48,6 +48,7 @@ class CellLabelAndImage: UITableViewCell {
     private lazy var label: UILabel = {
         let label = UILabel()
         label.textColor = .black
+        label.numberOfLines = 0
         return label
     }()
     private lazy var imageViewCell: UIImageView = {
@@ -59,6 +60,7 @@ class CellLabelAndImage: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         contentView.addSubview(label)
+        contentView.addSubview(imageViewCell)
         setupConstraints()
     }
     
@@ -67,14 +69,18 @@ class CellLabelAndImage: UITableViewCell {
     }
     
     private func setupConstraints() {
-//        imageViewCell.snp.makeConstraints { make in
-//            make.left.equalTo(contentView.snp.leftMargin).inset(20)
-//            make.top.equalTo(contentView.snp.topMargin).inset(5)
-//            make.bottom.equalTo(contentView.snp.bottomMargin).inset(5)
-//        }
+        imageViewCell.snp.makeConstraints { make in
+            make.top.equalTo(contentView.snp.topMargin).inset(10)
+            make.left.equalTo(contentView.snp.leftMargin).inset(0)
+            make.bottom.equalTo(contentView.snp.bottomMargin).inset(10)
+            make.width.equalTo(100)
+            make.height.equalTo(150)
+        }
+        
         label.snp.makeConstraints { make in
             make.top.equalTo(contentView.snp.topMargin).inset(0)
-            make.left.equalTo(contentView.snp.leftMargin).inset(0)
+            make.left.equalTo(imageViewCell.snp.rightMargin).inset(-20)
+            make.right.equalTo(contentView.snp.rightMargin).inset(10)
             make.bottom.equalTo(contentView.snp.bottomMargin).inset(0)
         }
 
@@ -82,8 +88,9 @@ class CellLabelAndImage: UITableViewCell {
     }
     
     func configure(_ viewModel: CellLabelAndImageModel){
-        label.text = viewModel.label
-        //imageViewCell.image = viewModel.image
+        label.text = viewModel.name
+        imageViewCell.image = viewModel.image
     }
+    
     
 }
