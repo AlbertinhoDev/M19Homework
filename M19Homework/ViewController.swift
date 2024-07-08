@@ -178,10 +178,12 @@ class ViewController: UIViewController {
                     filmLength = unwrapInt(int: myData.filmLength)
                     imageURL = unwrapString(string: myData.posterUrlPreview)
                     imagePoster = self.loadImage(urlString: imageURL) ?? UIImage()
+                    dispatchGroup3.leave()
                 }
                 dispatchGroup.leave()
                 case .failure(_):
                     self.dispatchGroup.leave()
+                    self.dispatchGroup3.leave()
                     return
             }
         }
@@ -207,21 +209,26 @@ extension ViewController: UITableViewDelegate {
         let id = viewModel.id
         let text = "https://kinopoiskapiunofficial.tech/api/v2.2/films/\(id)"
         self.chooseButton = .tableChoose
+        
+        dispatchGroup3.enter()
         alamofireProcess(text: text, chooseButton: chooseButton)
         
-        let descriptionViewController = DescriptionViewController()
+        dispatchGroup3.notify(queue: .main) {
+            let descriptionViewController = DescriptionViewController()
+            
+            descriptionViewController.ruName = self.nameRu
+            descriptionViewController.duration = "\(self.filmLength) мин."
+            descriptionViewController.enName = self.nameOriginal
+            descriptionViewController.imdbValue = "\(self.ratingImdb)"
+            descriptionViewController.kinopoiskValue = "\(self.ratingKinopoisk)"
+            descriptionViewController.year = "\(self.year)"
+            descriptionViewController.ruDescription = self.descriptionText
+            descriptionViewController.image = self.imagePoster
+            self.present(descriptionViewController, animated: true, completion: nil)
+            tableView.deselectRow(at: indexPath, animated: false)
+        }
+
         
-        descriptionViewController.ruName = nameRu
-        descriptionViewController.duration = "\(filmLength) мин."
-        descriptionViewController.enName = nameOriginal
-        descriptionViewController.imdbValue = "\(ratingImdb)"
-        descriptionViewController.kinopoiskValue = "\(ratingKinopoisk)"
-        descriptionViewController.year = "\(year)"
-        descriptionViewController.ruDescription = descriptionText
-        descriptionViewController.image = imagePoster
-        
-        present(descriptionViewController, animated: true, completion: nil)
-        tableView.deselectRow(at: indexPath, animated: false)
     }
 }
 
