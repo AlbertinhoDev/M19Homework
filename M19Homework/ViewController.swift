@@ -9,7 +9,7 @@ enum listButton {
 
 class ViewController: UIViewController {
     
-    private lazy var dataForTable = [CellLabelAndImageModel]()
+    private var dataForTable = [CellLabelAndImageModel]()
     
     var chooseButton: listButton = .none
     
@@ -22,7 +22,6 @@ class ViewController: UIViewController {
     let apiKeys = ["X-API-KEY" : "5a1aa54a-2e6d-40b4-aa36-e6950cc441ee"]
     let dispatchGroup = DispatchGroup()
     let dispatchGroup2 = DispatchGroup()
-    let dispatchGroup3 = DispatchGroup()
     
     
     var nameRu: String = ""
@@ -89,14 +88,15 @@ class ViewController: UIViewController {
     
     @objc func searchPressed(sender: UIButton) {
         dataForTable = [CellLabelAndImageModel]()
-        tableView.reloadData()
         textField.resignFirstResponder()
+        
         if self.textField.text!.trimmingCharacters(in: .whitespaces).isEmpty == false {
             let text = textField.text!
             stateLabel.text = "Поиск по запросу: \(text)"
             let searchText = searchViewData()
             self.chooseButton = .searchAndPopularButton
             alamofireProcess(text: searchText, chooseButton: chooseButton)
+            
             dispatchGroup.notify(queue: .main) {
                 self.tableView.reloadData()
             }
@@ -105,13 +105,14 @@ class ViewController: UIViewController {
     
     @objc func popularPressed(sender: UIButton) {
         dataForTable = [CellLabelAndImageModel]()
-        tableView.reloadData()
         textField.resignFirstResponder()
+        
         stateLabel.text = "Популярные фильмы"
         textField.text = ""
         let text = "https://kinopoiskapiunofficial.tech/api/v2.2/films/top?type=TOP_100_POPULAR_FILMS"
         self.chooseButton = .searchAndPopularButton
         alamofireProcess(text: text, chooseButton: chooseButton)
+        
         self.dispatchGroup.notify(queue: .main) {
             self.tableView.reloadData()
         }
@@ -180,11 +181,10 @@ class ViewController: UIViewController {
                     filmLength = unwrapInt(int: myData.filmLength)
                     imageURL = unwrapString(string: myData.posterUrlPreview)
                     imagePoster = self.loadImage(urlString: imageURL) ?? UIImage()
-                    dispatchGroup3.leave()
+                    dispatchGroup.leave()
                 }
                 case .failure(_):
                     self.dispatchGroup.leave()
-                    self.dispatchGroup3.leave()
                     return
             }
         }
@@ -210,13 +210,10 @@ extension ViewController: UITableViewDelegate {
         let id = viewModel.id
         let text = "https://kinopoiskapiunofficial.tech/api/v2.2/films/\(id)"
         self.chooseButton = .tableChoose
-        print(id)
-        dispatchGroup3.enter()
+        
         alamofireProcess(text: text, chooseButton: chooseButton)
-        
-        
-        
-        dispatchGroup3.notify(queue: .main) {
+
+        dispatchGroup.notify(queue: .main) {
             lazy var descriptionViewController = DescriptionViewController()
             
             descriptionViewController.ruName = self.nameRu
@@ -232,9 +229,6 @@ extension ViewController: UITableViewDelegate {
             tableView.deselectRow(at: indexPath, animated: false)
 
         }
-
-
-        
     }
 }
 
