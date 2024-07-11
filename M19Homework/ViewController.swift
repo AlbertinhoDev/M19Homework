@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     private lazy var dataForTable = [CellLabelAndImageModel]()
     
     var chooseButton: listButton = .none
+    
     private lazy var textField = ViewElements().textField
     private lazy var searchButton = ViewElements().searchButton
     private lazy var popularButton = ViewElements().popularButton
@@ -167,6 +168,7 @@ class ViewController: UIViewController {
                                 self.dataForTable.append(CellLabelAndImageModel(name: name, image: image!, id: id))
                             }
                         }
+                    dispatchGroup.leave()
                 case .tableChoose:
                     let myData = filmResults.1!
                     nameRu = unwrapString(string: myData.nameRu)
@@ -180,7 +182,6 @@ class ViewController: UIViewController {
                     imagePoster = self.loadImage(urlString: imageURL) ?? UIImage()
                     dispatchGroup3.leave()
                 }
-                dispatchGroup.leave()
                 case .failure(_):
                     self.dispatchGroup.leave()
                     self.dispatchGroup3.leave()
@@ -209,12 +210,14 @@ extension ViewController: UITableViewDelegate {
         let id = viewModel.id
         let text = "https://kinopoiskapiunofficial.tech/api/v2.2/films/\(id)"
         self.chooseButton = .tableChoose
-        
+        print(id)
         dispatchGroup3.enter()
         alamofireProcess(text: text, chooseButton: chooseButton)
         
+        
+        
         dispatchGroup3.notify(queue: .main) {
-            let descriptionViewController = DescriptionViewController()
+            lazy var descriptionViewController = DescriptionViewController()
             
             descriptionViewController.ruName = self.nameRu
             descriptionViewController.duration = "\(self.filmLength) мин."
@@ -224,9 +227,12 @@ extension ViewController: UITableViewDelegate {
             descriptionViewController.year = "\(self.year)"
             descriptionViewController.ruDescription = self.descriptionText
             descriptionViewController.image = self.imagePoster
+            
             self.present(descriptionViewController, animated: true, completion: nil)
             tableView.deselectRow(at: indexPath, animated: false)
+
         }
+
 
         
     }
