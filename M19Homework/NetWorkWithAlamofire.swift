@@ -39,6 +39,10 @@ class NetWorkWithAlamofire {
                     guard let filmResults = try? decoder.decode(QuereForDescription.self, from: data) else {
                         return
                     }
+                    DispatchQueue.main.async {
+                        print(filmResults.nameRu)
+                    }
+                    
                     
                     var films: QuereForTable?
                     films = .none

@@ -13,8 +13,8 @@ struct Films: Decodable {
 
 //MARK: Модель для конкретного фильма
 struct QuereForDescription: Decodable {
-    var ratingKinopoisk: Int? //рейтинг кинопоиск
-    var ratingImdb: Int? //рейтинг imdb
+    var ratingKinopoisk: Double? //рейтинг кинопоиск
+    var ratingImdb: Double? //рейтинг imdb
     var nameRu: String? //название
     var nameOriginal: String? //название
     var description: String? //описание

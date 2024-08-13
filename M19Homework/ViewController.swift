@@ -27,8 +27,8 @@ class ViewController: UIViewController {
     var nameRu: String = ""
     var nameOriginal: String = ""
     var descriptionText: String = ""
-    var ratingKinopoisk: Int = 0
-    var ratingImdb: Int = 0
+    var ratingKinopoisk: Double = 0.0
+    var ratingImdb: Double = 0.0
     var year: Int = 0
     var filmLength: Int = 0
     var imageURL: String = ""
@@ -129,6 +129,11 @@ class ViewController: UIViewController {
         return int
     }
     
+    private func unwrapDouble(double : Double?) -> Double{
+        guard let double = double else {return 0}
+        return double
+    }
+    
     private func loadImage(urlString: String) -> UIImage?  {
         var imageForReturn: UIImage?
         let url = URL(string: urlString)!
@@ -175,12 +180,13 @@ class ViewController: UIViewController {
                     nameRu = unwrapString(string: myData.nameRu)
                     nameOriginal = unwrapString(string: myData.nameOriginal)
                     descriptionText = unwrapString(string: myData.description)
-                    ratingKinopoisk = unwrapInt(int: myData.ratingKinopoisk)
-                    ratingImdb = unwrapInt(int: myData.ratingImdb)
+                    ratingKinopoisk = unwrapDouble(double: myData.ratingKinopoisk)
+                    ratingImdb = unwrapDouble(double: myData.ratingImdb)
                     year = unwrapInt(int: myData.year)
                     filmLength = unwrapInt(int: myData.filmLength)
                     imageURL = unwrapString(string: myData.posterUrlPreview)
                     imagePoster = self.loadImage(urlString: imageURL) ?? UIImage()
+                    
                     dispatchGroup.leave()
                 }
                 case .failure(_):
@@ -212,8 +218,9 @@ extension ViewController: UITableViewDelegate {
         self.chooseButton = .tableChoose
         
         alamofireProcess(text: text, chooseButton: chooseButton)
-
+        
         dispatchGroup.notify(queue: .main) {
+            print(self.nameRu)
             lazy var descriptionViewController = DescriptionViewController()
             
             descriptionViewController.ruName = self.nameRu
@@ -224,6 +231,17 @@ extension ViewController: UITableViewDelegate {
             descriptionViewController.year = "\(self.year)"
             descriptionViewController.ruDescription = self.descriptionText
             descriptionViewController.image = self.imagePoster
+            
+            
+//            print(descriptionViewController.ruName)
+//            print(descriptionViewController.duration)
+//            print(descriptionViewController.enName)
+//            print(descriptionViewController.imdbValue)
+//            print(descriptionViewController.kinopoiskValue)
+//            print(descriptionViewController.year)
+//            print(descriptionViewController.ruDescription)
+//            print(descriptionViewController.image)
+        
             
             self.present(descriptionViewController, animated: true, completion: nil)
             tableView.deselectRow(at: indexPath, animated: false)
